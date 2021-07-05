@@ -1,0 +1,44 @@
+
+.navContainer{
+    width:100%;
+    height:50rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("../../../public/assets/home/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+}
+
+.nav{
+    width: 75rem;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    //background-color: black;
+    color:white;
+    padding: 2rem 0 2rem 0;
+
+    p{
+        width: 10rem;
+        font-weight: 800;
+        font-size: 1.5rem
+    }
+
+    .imgContainer{
+
+        width:10rem;
+    }
+
+    ul{
+        width: 34rem;
+
+        li{ 
+            font-weight: 400;
+            margin: 0 1rem 0 1rem;   
+            list-style: none;
+            display: inline; 
+        }
+    }
+}
