@@ -1,9 +1,16 @@
+:root{
+  --dark-orange: #D87D4A;
+  --light-orange: #fbaf85;
+  --light-black: #101010;
+  --light-gray: #FAFAFA;
+  --dark-gray: #F1F1F1;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 a {
