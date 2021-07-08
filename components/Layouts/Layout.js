@@ -1,11 +1,14 @@
-import Navbar from './Navbar/Navbar'
+import Header from './Header/Header'
 import Footer from './Footer/Footer'
+import classes from './Layout.module.scss'
 function Layout (props) {
   return (
-    <div>
-      <Navbar/>
+    <div className={classes.Layout}>
+      <Header className={classes.itema}/>
+      <main className={classes.itemb}>
       {props.children}
-      <Footer/>
+      </main>
+      <Footer className={classes.itemd}/>
     </div>
 
   )

@@ -1,6 +1,8 @@
+import layout from '../Layout.module.scss'
+
 function Footer () {
   return (
-        <footer>
+        <footer className={`${layout.itemd}`}>
             <p>Footer</p>
         </footer>
   )

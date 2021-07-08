@@ -1,4 +1,22 @@
+.itema {
+    grid-area: header;
+}
+.itemb {
+    grid-area: main;
+}
+.itemd {
+    grid-area: footer;
+}
+  
 .Layout{
 
-    
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    "footer footer footer";      
 }
+

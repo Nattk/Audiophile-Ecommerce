@@ -1,0 +1,29 @@
+.standardBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:10rem;
+    height:3rem;
+    background-color: var(--dark-orange);
+    text-transform: uppercase;
+    color:white;
+    font-size: 0.6rem;
+    letter-spacing:  0.1rem;
+    transition: background-color 0.5s;
+    margin-top:2rem;
+
+    cursor:pointer;
+
+    &:hover{
+        background-color: var(--light-orange);
+    }
+}
+
+.whiteBtn{
+
+
+}
+
+.noBorderBtn{
+
+}
