@@ -1,21 +1,29 @@
-.itema {
+.navContainer{
+    grid-area: 1/1/1/4;
+    width:100%;
+    height:55rem;
+    background-image: url("../../public/assets/home/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
     grid-area: header;
 }
-.itemb {
+.main {
     grid-area: main;
 }
-.itemd {
+.footer {
     grid-area: footer;
 }
-  
-.Layout{
 
+.Layout{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "header header header"
+    ". header ."
     ". main ."
     "footer footer footer";      
 }

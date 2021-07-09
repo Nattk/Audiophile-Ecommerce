@@ -15,7 +15,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    //background-color: black;
     color:white;
     padding: 2rem 0 2rem 0;
     border-bottom: #979797 solid thin;
@@ -41,7 +40,12 @@
             text-transform: uppercase;
             margin: 0 1rem 0 1rem;   
             list-style: none;
-            display: inline; 
+            display: inline;
+            transition: color 0.5s; 
+
+         &:hover{
+             color: var(--dark-orange)
+         }
         }
     }
 }
@@ -79,12 +83,12 @@
         text-transform: uppercase;
         font-weight: 600;
         color:white;
-        font-size: 2.9rem;
+        font-size: 3.8rem;
         letter-spacing: 2px;
     }
 
     p:nth-child(3){
-        width:80%;
+        width:85%;
         font-weight: 200;
         color:#979797;
     }

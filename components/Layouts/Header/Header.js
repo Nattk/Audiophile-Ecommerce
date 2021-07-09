@@ -9,8 +9,7 @@ import SubHeader from './SubHeader'
 function Header () {
   return (
      <Fragment>
-        <div className={`${classes.navContainer}`}></div>
-        <header className={`${layout.itema}`}>
+        <header className={`${layout.header}`}>
             <nav className={`${classes.nav}`}>
                 <p>audiophile</p>
                 <ul>

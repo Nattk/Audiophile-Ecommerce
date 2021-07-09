@@ -5,7 +5,6 @@ import classes from './Header.module.scss'
 function SubHeader () {
   const router = useRouter()
   let subHeaderContent
-  console.log(classes)
 
   if (router.pathname === '/') {
     subHeaderContent = (<section className={classes.homeProductItem}>

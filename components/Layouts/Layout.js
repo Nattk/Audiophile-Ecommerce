@@ -4,11 +4,12 @@ import classes from './Layout.module.scss'
 function Layout (props) {
   return (
     <div className={classes.Layout}>
-      <Header className={classes.itema}/>
-      <main className={classes.itemb}>
+      <div className={`${classes.navContainer}`}></div>
+      <Header/>
+      <main className={classes.main}>
       {props.children}
       </main>
-      <Footer className={classes.itemd}/>
+      <Footer/>
     </div>
 
   )

@@ -1,0 +1,14 @@
+.CategoryItem{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+    div:first-child{
+        grid-area: 1/1/2/1;
+        height: 10rem;
+    }
+
+    div:last-child{
+        grid-area: 1/1/2/1;
+    }
+    
+}
