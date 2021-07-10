@@ -1,13 +1,36 @@
 import classes from './CategoryItem.module.scss'
 import Image from 'next/image'
 import Headphones from '../../public/assets/shared/desktop/image-headphones.png'
+import Speakers from '../../public/assets/shared/desktop/image-speakers.png'
+import Earphones from '../../public/assets/shared/desktop/image-earphones.png'
 
-function CategoryItem () {
+import Button from '../UI/Button/Button'
+
+function CategoryItem (props) {
+  const category = props.category
+  let item
+  switch (category) {
+    case 'Headphones':
+      item = (<Image src={Headphones} alt="Headphones" width={230} height={230}/>)
+      break
+    case 'Speakers':
+      item = (<Image src={Speakers} alt="Speakers" width={230} height={230}/>)
+      break
+    case 'Earphones':
+      item = (<Image src={Earphones} alt="Earphones" width={230} height={230}/>)
+      break
+    default:
+      item = (<Image src={Earphones} alt="Earphones" width={230} height={230}/>)
+      break
+  }
   return (
         <div className={classes.CategoryItem}>
-            <div><p>Headphones</p></div>
-            <Image src={Headphones} alt="Headphones"/>
-
+            <div className={classes.imgContainer}>
+              {item}
+              <p>{category}</p>
+              <Button type="arrow">Shop</Button>
+            </div>
+            <div className={classes.categoryName}></div>
         </div>
   )
 }

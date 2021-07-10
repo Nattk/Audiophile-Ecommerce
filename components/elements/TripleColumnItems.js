@@ -4,7 +4,9 @@ import CategoryItem from './CategoryItem'
 function TripleColumnItems () {
   return (
         <section className={classes.tripleColumns}>
-            <CategoryItem/>
+            <CategoryItem category="Headphones"/>
+            <CategoryItem category="Speakers"/>
+            <CategoryItem category="Earphones"/>
         </section>
   )
 }

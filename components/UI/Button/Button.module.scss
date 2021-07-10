@@ -1,3 +1,15 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:10rem;
+    height:3rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing:  0.1rem;
+    cursor:pointer;
+}
+
 .standardBtn{
     display: flex;
     justify-content: center;
@@ -7,8 +19,6 @@
     background-color: var(--dark-orange);
     text-transform: uppercase;
     color:white;
-    font-size: 0.75rem;
-    letter-spacing:  0.1rem;
     transition: background-color 0.5s;
     margin-top:2rem;
 
@@ -19,11 +29,10 @@
     }
 }
 
-.whiteBtn{
+.arrowBtn{
+    color:#979797;
 
-
-}
-
-.noBorderBtn{
-
+    span{
+        color:var(--dark-orange)
+    }
 }

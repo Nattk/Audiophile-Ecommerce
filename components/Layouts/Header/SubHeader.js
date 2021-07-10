@@ -11,7 +11,7 @@ function SubHeader () {
                           <p>new product</p>
                           <p>XX99 Mark II Headphones</p>
                           <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                          <Button>See product</Button>
+                          <Button type="standard">See product</Button>
                           </section>)
   } else {
     subHeaderContent = (<section className={classes.categoryName}>
