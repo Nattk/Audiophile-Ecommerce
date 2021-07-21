@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 40rem 1fr 1fr;
+    column-gap: 1rem;
     width:100%;
     border-radius: var(--radius);
     grid-template-areas: "row1 row1" "row2 row2" "row3col1 row3col2";
@@ -32,9 +33,27 @@
 }
 
 .productDesc{
+    width:25rem;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    p{
+        margin-bottom: 2rem;
+    }
+
+    p:first-child{
+        text-transform: uppercase;
+        line-height: 4rem;
+        font-weight: 600;
+        font-size: 3.8rem;
+        letter-spacing: 2px;
+    }
+
+    p:nth-child(2){
+        font-weight: 200;
+    }
 }
 
 .img{
@@ -47,12 +66,24 @@
 
 .row2{
     grid-area: row2;
+    height: 20rem;
+    background-image: url("../../public/assets/home/desktop/image-speaker-zx7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .row3col1{
-    grid-area: row3;
+    grid-area: row3col1;
+    height: 20rem;
+    background-image: url("../../public/assets/home/desktop/image-earphones-yx1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .row3col2{
     grid-area: row3col2;
+    height: 20rem;
+    background-color:var(--dark-gray);
+
 }

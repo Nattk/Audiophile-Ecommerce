@@ -16,18 +16,20 @@ function TripleRowItems () {
               <div className={classes.productDesc}>
                 <p>ZX9 SPEAKER</p>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                <Button type="standard">See the product</Button>
+                <Button type="black">See the product</Button>
               </div>
             </div>
           </div>
           <div className={classes.row2}>
-            ZX7
+            <p>ZX7 SPEAKER</p>
+            <Button type="black">See the product</Button>
           </div>
-          <div className={classes.row3}>
+          <div className={classes.row3col1}>
             earphones
           </div>
           <div className={classes.row3col2}>
-            earphones 2
+          <p>YX1 EARPHONES</p>
+          <Button type="black">See the product</Button>
           </div>
 
         </section>
