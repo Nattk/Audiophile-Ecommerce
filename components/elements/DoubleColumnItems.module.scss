@@ -1,0 +1,45 @@
+.doubleColumn{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    justify-content: center;
+    height: 40rem;
+
+}
+
+.textColumn{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    h2{
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 2rem;
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        width:22rem;
+        margin-bottom: 1rem;
+        
+        span{
+            color:var(--dark-orange)
+        }
+    }
+
+    p{
+        width:28rem;
+        font-size: 1rem;
+        font-weight: 200;
+        color:#979797;
+
+    }
+}
+
+.imageColumn{
+    background-image: url('../../public/assets/shared/desktop/image-best-gear.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

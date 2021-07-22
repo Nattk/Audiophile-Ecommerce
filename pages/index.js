@@ -2,6 +2,7 @@ import Head from 'next/head'
 import TripleColumnItems from '../components/elements/TripleColumnItems'
 import { Fragment } from 'react'
 import TripleRowItems from '../components/elements/TripleRowItems'
+import DoubleColumnItems from '../components/elements/DoubleColumnItems'
 
 export default function Home () {
   return (
@@ -13,6 +14,7 @@ export default function Home () {
       </Head>
         <TripleColumnItems/>
         <TripleRowItems/>
+        <DoubleColumnItems/>
     </Fragment>
 
   )
