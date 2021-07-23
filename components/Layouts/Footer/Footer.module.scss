@@ -1,9 +1,47 @@
 .footer{
     color:white;
     background-color: black;
-    display: grid;
     width: 100%;
 
+    .brandDesc{
+        margin-top: 2rem;
+        width:50%;
+        font-size: 1rem;
+        font-weight: 200;
+        color: #979797;
+    }
+    
+    .socials{
+        margin-top: 1rem;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: baseline;
+
+        svg{
+            margin-left:1rem;
+        }
+    }
+    
+    p:last-child{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: #979797;
+    }
+}
+
+.orangeLine{
+    width:6rem;
+    height:0.2rem;
+    background-color: var(--dark-orange);
+}
+
+.title{
+    width: 10rem;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .nav{
@@ -12,4 +50,22 @@
     justify-content: space-between;
     align-items: baseline;
     color:white;
+    margin-top: 2rem ;
+
+    ul{
+        li{ 
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 1rem;   
+            list-style: none;
+            display: inline;
+            transition: color 0.5s; 
+
+         &:hover{
+             color: var(--dark-orange)
+         }
+        }
+    }
 }

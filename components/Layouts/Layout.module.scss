@@ -17,6 +17,22 @@
 }
 .footer {
     grid-area: footer;
+    background-color: black;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    grid-area: left;
+    background-color: black;
+    width:100%;
+}
+
+.right{
+    background-color: black;
+    grid-area: right;
+    width:100%;
 }
 
 .Layout{
@@ -27,6 +43,6 @@
     grid-template-areas: 
     ". header ."
     ". main ."
-    "footer footer footer";      
+    "left footer right";      
 }
 
