@@ -1,7 +1,6 @@
 import layout from '../Layout.module.scss'
 import classes from './Footer.module.scss'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Fragment } from 'react'
 
 function Footer () {

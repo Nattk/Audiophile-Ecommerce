@@ -8,6 +8,7 @@
   --radius: 0.7rem;
 }
 
+
 html,
 body {
   padding: 0;
@@ -25,3 +26,38 @@ a {
   margin: 0;
   box-sizing: border-box;
 }
+
+
+.productArea{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:85%;
+
+
+  h2{
+    color:black;
+    text-transform:uppercase;
+    line-height: 3rem;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  .new{
+    text-transform: uppercase;
+    font-weight: 400;
+    color:var(--dark-orange);
+    letter-spacing: 10px;
+  }
+  
+  .description{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width:85%;
+    font-weight: 200;
+    color:#979797;
+  }
+
+}
+
