@@ -1,0 +1,17 @@
+.Gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .firstCol{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 34rem;
+        height: 37rem;
+    }
+    .secondCol{
+        height: auto;
+    
+    }
+}

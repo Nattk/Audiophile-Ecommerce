@@ -1,4 +1,6 @@
 import classes from './DoubleColumnItems.module.scss'
+import Image from 'next/image'
+import BestGear from '../../public/assets/shared/desktop/image-best-gear.jpg'
 
 function DoubleColumnItem () {
   return (
@@ -12,7 +14,7 @@ function DoubleColumnItem () {
                 </p>
             </div>
             <div className={classes.imageColumn}>
-
+                <Image src={BestGear} alt='bestGear'/>
             </div>
         </section>
   )

@@ -1,0 +1,43 @@
+.tripleColumn{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: ". title ."
+                         "firstCol secondCol lastCol" ;
+
+    font-weight: 600;
+    text-transform: uppercase;
+
+    h3{
+        grid-area:title;
+        font-size: 1.8rem;
+    }
+
+    .col{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            margin-top: 2rem;
+        }
+    }
+
+    .firstCol{
+        grid-area:firstCol;
+    }
+
+    .secondCol{
+        grid-area:secondCol;
+    }
+
+    .lastCol{
+        grid-area:lastCol;
+    }
+}

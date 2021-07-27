@@ -39,7 +39,7 @@
 }
 
 .imageColumn{
-    background-image: url('../../public/assets/shared/desktop/image-best-gear.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+
 }

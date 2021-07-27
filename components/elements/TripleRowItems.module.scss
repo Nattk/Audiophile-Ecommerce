@@ -7,6 +7,17 @@
     border-radius: var(--radius);
     grid-template-areas: "row1 row1" "row2 row2" "row3col1 row3col2";
     overflow-x: none;
+    
+    h3{
+        text-transform: uppercase;
+        line-height: 4rem;
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        
+    }
+
+
    
     svg{
         position: absolute;
@@ -43,7 +54,7 @@
         margin-bottom: 2rem;
     }
 
-    p:first-child{
+    h2{
         text-transform: uppercase;
         line-height: 4rem;
         font-weight: 600;
@@ -70,6 +81,14 @@
     background-image: url("../../public/assets/home/desktop/image-speaker-zx7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    div:first-child{
+        width:40%; 
+        margin-left: 10rem;
+    }
 
 }
 
@@ -85,5 +104,13 @@
     grid-area: row3col2;
     height: 20rem;
     background-color:var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    div:first-child{ 
+        margin-left: 5rem;
+    }
+
 
 }

@@ -14,22 +14,26 @@ function TripleRowItems () {
               <Image src={speaker} width={350} height={500} alt="speaker"/>
               </div>
               <div className={classes.productDesc}>
-                <p>ZX9 SPEAKER</p>
+                <h2>ZX9 SPEAKER</h2>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                 <Button type="black">See the product</Button>
               </div>
             </div>
           </div>
           <div className={classes.row2}>
-            <p>ZX7 SPEAKER</p>
-            <Button type="black">See the product</Button>
+            <div>
+              <h3>ZX7 SPEAKER</h3>
+              <Button type="black">See the product</Button>
+            </div>
           </div>
           <div className={classes.row3col1}>
-            earphones
+
           </div>
           <div className={classes.row3col2}>
-          <p>YX1 EARPHONES</p>
-          <Button type="black">See the product</Button>
+            <div>
+              <h3>YX1 EARPHONES</h3>
+              <Button type="black">See the product</Button>
+            </div>
           </div>
 
         </section>
