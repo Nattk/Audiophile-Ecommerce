@@ -15,7 +15,7 @@ function SubHeader () {
                           </section>)
   } else {
     subHeaderContent = (<section className={classes.categoryName}>
-                          {router.pathname}
+                          <h1>{router.pathname.replace('/', '')}</h1>
                         </section>)
   }
   return subHeaderContent

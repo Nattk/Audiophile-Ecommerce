@@ -5,11 +5,14 @@ import Image from 'next/image'
 import cart from '../../../public/assets/shared/desktop/icon-cart.svg'
 import { Fragment } from 'react'
 import SubHeader from './SubHeader'
+import { useRouter } from 'next/router'
 
 function Header () {
+  const router = useRouter()
   return (
      <Fragment>
-        <header className={`${layout.header}`}>
+      <div className={layout.leftHeader} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}></div>
+        <header className={`${layout.header}`} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'none' }}>
             <nav className={`${classes.nav}`}>
                 <p>audiophile</p>
                 <ul>
@@ -30,6 +33,7 @@ function Header () {
             </nav>
             <SubHeader/>
         </header>
+        <div className={layout.rightHeader} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}></div>
     </Fragment>
 
   )

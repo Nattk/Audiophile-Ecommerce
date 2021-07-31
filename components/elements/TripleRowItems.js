@@ -27,7 +27,6 @@ function TripleRowItems () {
             </div>
           </div>
           <div className={classes.row3col1}>
-
           </div>
           <div className={classes.row3col2}>
             <div>

@@ -7,11 +7,26 @@
     background-size: cover;
 }
 
-.header {
-    grid-area: header;
+.header{
+    grid-area:header;
 }
+
+.leftHeader{
+    background-color: black;
+    grid-area: leftHeader;
+    width:100%;   
+}
+
+.rightHeader{ 
+    background-color: black;
+    grid-area: rightHeader;
+    width:100%;   
+}
+
 .main {
     grid-area: main;
+    display: grid;
+    row-gap: 5rem;
     min-width: 100%;
     min-height: 40rem;
 }
@@ -40,8 +55,9 @@
     justify-items: center;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
+    grid-auto-flow: dense;
     grid-template-areas: 
-    ". header ."
+    "leftHeader header rightHeader"
     ". main ."
     "left footer right";      
 }
