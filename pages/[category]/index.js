@@ -1,5 +1,8 @@
 import { productsData, categoryName } from '../../data'
 import DoubleColumnProduct from '../../components/elements/DoubleColumnProduct'
+import TripleColumnItems from '../../components/elements/TripleColumnItems'
+import DoubleColumnItems from '../../components/elements/DoubleColumnItems'
+
 import { Fragment } from 'react'
 
 export const getStaticProps = async (context) => {
@@ -27,11 +30,16 @@ function Category ({ products }) {
   console.log(products)
   return (
       <Fragment>
-          {products.map(product => (
-              <DoubleColumnProduct key={product.id} inversion={false}/>
-          ))
+          {products.map((product, index) => {
+            if ((index + 1) % 2 !== 0) {
+              return <DoubleColumnProduct key={product.id} product={product} inversion={false}/>
+            } else {
+              return <DoubleColumnProduct key={product.id} product={product} inversion={true}/>
+            }
+          })
           }
-
+          <TripleColumnItems/>
+          <DoubleColumnItems/>
       </Fragment>
   )
 }

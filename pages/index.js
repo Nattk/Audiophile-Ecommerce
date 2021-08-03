@@ -10,6 +10,7 @@ import Product from '../public/assets/category-headphones/desktop/image-xx59.jpg
 import DoubleColumnGallery from '../components/elements/DoubleColumnGallery'
 import DoubleColumnProductDetails from '../components/elements/DoubleColumnProductDetails'
 import YouMayAlsoLike from '../components/elements/YouMayAlsoLike'
+
 export default function Home () {
   return (
     <Fragment>
