@@ -6,7 +6,6 @@ import DoubleColumnItems from '../../components/elements/DoubleColumnItems'
 import { Fragment } from 'react'
 
 export const getStaticProps = async (context) => {
-  console.log(context)
   const category = context.params.category
   const Categoryproducts = productsData.filter(product => product.category === category)
   return {
@@ -27,7 +26,6 @@ export const getStaticPaths = async () => {
 }
 
 function Category ({ products }) {
-  console.log(products)
   return (
       <Fragment>
           {products.map((product, index) => {

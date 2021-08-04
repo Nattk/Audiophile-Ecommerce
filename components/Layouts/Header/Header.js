@@ -9,10 +9,11 @@ import { useRouter } from 'next/router'
 
 function Header () {
   const router = useRouter()
+
   return (
      <Fragment>
       <div className={layout.leftHeader} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}></div>
-        <header className={`${layout.header}`} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'none' }}>
+        <header className={`${layout.header}`} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}>
             <nav className={`${classes.nav}`}>
                 <p>audiophile</p>
                 <ul>
@@ -20,13 +21,13 @@ function Header () {
                         <Link href="/">Home</Link>
                     </li>
                     <li>
-                        <Link href="/">Headphones</Link>
+                        <Link href="/headphones">Headphones</Link>
                     </li>
                     <li>
-                        <Link href="/">Speakers</Link>
+                        <Link href="/speakers">Speakers</Link>
                     </li>
                     <li>
-                        <Link href="/">Earphones</Link>
+                        <Link href="/earphones">Earphones</Link>
                     </li>
                 </ul>
                     <Image src={cart} alt="cart"/>

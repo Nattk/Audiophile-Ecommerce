@@ -2,7 +2,17 @@ import Button from '../../UI/Button/Button'
 import { useRouter } from 'next/router'
 import classes from './Header.module.scss'
 
-function SubHeader () {
+export const getStaticProps = async (context) => {
+  console.log(context)
+  const category = context.params.category
+  return {
+    props: {
+      categoryName: category
+    }
+  }
+}
+
+function SubHeader ({ categoryName }) {
   const router = useRouter()
   let subHeaderContent
   if (router.pathname === '/') {
@@ -14,7 +24,7 @@ function SubHeader () {
                           </section>)
   } else {
     subHeaderContent = (<section className={classes.categoryName}>
-                          <h1>{router.pathname.replace('/', '')}</h1>
+                          <h1>{router.query.category}</h1>
                         </section>)
   }
   return subHeaderContent

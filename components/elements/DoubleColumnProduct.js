@@ -6,7 +6,6 @@ import classes from './DoubleColumnProduct.module.scss'
 function DoubleColumnProduct (props) {
   const inversion = props.inversion
   const product = props.product
-  console.log({ justifyItems: inversion ? 'start' : 'center' })
 
   return (
         <section className={`${classes.DoubleColumn} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }}>

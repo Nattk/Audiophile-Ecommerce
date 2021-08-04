@@ -19,13 +19,13 @@ function Footer () {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">Headphones</Link>
+                            <Link href="/headphones">Headphones</Link>
                         </li>
                         <li>
-                            <Link href="/">Speakers</Link>
+                            <Link href="/speakers">Speakers</Link>
                         </li>
                         <li>
-                            <Link href="/">Earphones</Link>
+                            <Link href="/earphones">Earphones</Link>
                         </li>
                     </ul>
                 </nav>
