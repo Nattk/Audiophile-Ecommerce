@@ -10,13 +10,13 @@ function CategoryItem (props) {
   const category = props.category
   let item
   switch (category) {
-    case 'Headphones':
+    case 'headphones':
       item = (<Image src={Headphones} alt="Headphones" width={230} height={230}/>)
       break
-    case 'Speakers':
+    case 'speakers':
       item = (<Image src={Speakers} alt="Speakers" width={230} height={230}/>)
       break
-    case 'Earphones':
+    case 'earphones':
       item = (<Image src={Earphones} alt="Earphones" width={230} height={230}/>)
       break
     default:
@@ -28,7 +28,7 @@ function CategoryItem (props) {
             <div className={classes.imgContainer}>
               {item}
               <p>{category}</p>
-              <Button type="arrow">Shop</Button>
+              <Button type="arrow" path={`/${category}`}>Shop</Button>
             </div>
             <div className={classes.categoryName}></div>
         </div>

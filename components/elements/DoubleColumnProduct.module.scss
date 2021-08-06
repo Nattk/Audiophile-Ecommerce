@@ -36,6 +36,7 @@
       letter-spacing: 2px;
     }
     .new{
+      margin-bottom: 1rem;
       text-transform: uppercase;
       font-weight: 400;
       color:var(--dark-orange);
@@ -48,6 +49,13 @@
       width:85%;
       font-weight: 200;
       color:#979797;
+    }
+
+    .addProduct{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 18rem;
     }
   
   }

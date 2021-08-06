@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Image from 'next/image'
 import Button from '../UI/Button/Button'
 import classes from './DoubleColumnProduct.module.scss'
+import { useRouter } from 'next/router'
+import QuantityButton from '../UI/Button/QuantityButton'
 
 function DoubleColumnProduct (props) {
   const inversion = props.inversion
   const product = props.product
+  const router = useRouter()
+  console.log(router.pathname)
 
   return (
         <section className={`${classes.DoubleColumn} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }}>
@@ -16,7 +20,16 @@ function DoubleColumnProduct (props) {
             {product.new && <p className={classes.new}>New product</p>}
             <h2>{product.name}</h2>
             <p className={classes.description}>{product.description}</p>
-            <Button type="standard">See the product</Button>
+            { router.pathname !== '/[category]/[productDetails]' && <Button type="standard" path= {`${product.category}/${product.slug}`} query={{ id: product.id }}>see the product</Button>}
+            { router.pathname === '/[category]/[productDetails]' &&
+            <Fragment>
+              <p className="price">${product.price}</p>
+              <div className={classes.addProduct}>
+                <QuantityButton/>
+                <Button type="standard" path= {`${product.category}/${product.slug}`}>add product</Button>
+              </div>
+            </Fragment>
+            }
           </div>
        </section>
   )

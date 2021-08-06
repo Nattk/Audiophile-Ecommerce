@@ -32,9 +32,13 @@
 
 &.arrowBtn{
     color:#979797;
+    transition: all 0.5s;
 
     span{
         color:var(--dark-orange)
+    }
+    &:hover{
+        color :var(--dark-orange);
     }
 }
 

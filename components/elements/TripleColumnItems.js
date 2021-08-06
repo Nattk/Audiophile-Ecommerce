@@ -1,12 +1,13 @@
 import classes from './TripleColumnItems.module.scss'
 import CategoryItem from './CategoryItem'
+import { categoryName } from '../../data'
 
 function TripleColumnItems () {
   return (
         <section className={classes.tripleColumns}>
-            <CategoryItem category="Headphones"/>
-            <CategoryItem category="Speakers"/>
-            <CategoryItem category="Earphones"/>
+          {categoryName.map(category => (
+            <CategoryItem key={category.id} category={category.name}/>
+          ))}
         </section>
   )
 }
