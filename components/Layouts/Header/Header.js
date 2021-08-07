@@ -30,7 +30,9 @@ function Header () {
                         <Link href="/earphones">Earphones</Link>
                     </li>
                 </ul>
-                    <Image src={cart} alt="cart"/>
+                    <div className={classes.cart}>
+                        <Image src={cart} alt="cart"/>
+                    </div>
             </nav>
             <SubHeader/>
         </header>
