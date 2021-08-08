@@ -7,7 +7,7 @@ import { Fragment } from 'react'
 import SubHeader from './SubHeader'
 import { useRouter } from 'next/router'
 
-function Header () {
+function Header (props) {
   const router = useRouter()
 
   return (
@@ -30,9 +30,10 @@ function Header () {
                         <Link href="/earphones">Earphones</Link>
                     </li>
                 </ul>
-                    <div className={classes.cart}>
-                        <Image src={cart} alt="cart"/>
-                    </div>
+                <div className={classes.Cart} onClick={props.cartClicked}>
+                    <Image src={cart} alt="cart"/>
+                 </div>
+
             </nav>
             <SubHeader/>
         </header>
