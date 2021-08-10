@@ -28,7 +28,7 @@ function CategoryItem (props) {
             <div className={classes.imgContainer}>
               {item}
               <p>{category}</p>
-              <Button type="arrow" path={`/${category}`}>Shop</Button>
+              <Button type="arrow" clicked={props.action}>Shop</Button>
             </div>
             <div className={classes.categoryName}></div>
         </div>

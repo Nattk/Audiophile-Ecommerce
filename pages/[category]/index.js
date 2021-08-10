@@ -2,6 +2,7 @@ import { productsData, categoryName } from '../../data'
 import DoubleColumnProduct from '../../components/elements/DoubleColumnProduct'
 import TripleColumnItems from '../../components/elements/TripleColumnItems'
 import DoubleColumnItems from '../../components/elements/DoubleColumnItems'
+import { useRouter } from 'next/router'
 
 import { Fragment } from 'react'
 
@@ -26,13 +27,21 @@ export const getStaticPaths = async () => {
 }
 
 function Category ({ products }) {
+  const router = useRouter()
+
+  const handleChangePage = (product) => {
+    router.push({
+      pathname: `${product.category}/${product.slug}`
+    })
+  }
+
   return (
       <Fragment>
           {products.map((product, index) => {
             if ((index + 1) % 2 !== 0) {
-              return <DoubleColumnProduct key={product.id} product={product} inversion={false}/>
+              return <DoubleColumnProduct key={product.id} product={product} inversion={false} action={() => handleChangePage(product)}/>
             } else {
-              return <DoubleColumnProduct key={product.id} product={product} inversion={true}/>
+              return <DoubleColumnProduct key={product.id} product={product} inversion={true} action={() => handleChangePage(product)}/>
             }
           })
           }
