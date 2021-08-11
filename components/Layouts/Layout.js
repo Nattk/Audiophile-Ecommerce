@@ -3,6 +3,7 @@ import Footer from './Footer/Footer'
 import classes from './Layout.module.scss'
 import Modal from '../UI/Button/Modal'
 import Card from '../UI/Button/Card'
+import Cart from '../elements/Cart'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
@@ -11,7 +12,6 @@ function Layout (props) {
   const [modalVisibilty, setModalVisibility] = useState(false)
 
   const handleModalVisibility = () => {
-    console.log('handleModal')
     setModalVisibility(!modalVisibilty)
   }
 
@@ -23,9 +23,9 @@ function Layout (props) {
       <Header cartClicked={handleModalVisibility}/>
       <main className={classes.main}>
       {props.children}
-      <Modal visible={modalVisibilty} modalClosed={handleModalVisibility}>
+      <Modal visible={modalVisibilty}>
         <Card modalClosed={handleModalVisibility}>
-            <p>Cart</p>
+          <Cart/>
         </Card>
       </Modal>
       </main>

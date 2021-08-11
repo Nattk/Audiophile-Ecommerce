@@ -1,9 +1,9 @@
 import classes from './Card.module.scss'
 
 function Card (props) {
-  console.log(props)
   return (
-        <section className={classes.card} onClick={props.modalClosed}>
+        <section className={classes.card}>
+          <button onClick={props.modalClosed}>x</button>
             {props.children}
         </section>
   )
