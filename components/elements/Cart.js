@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import Button from '../UI/Button/Button'
 import QuantityButton from '../UI/Button/QuantityButton'
-import Image from 'next/image'
 import classes from './Cart.module.scss'
 
 function Cart (props) {
@@ -9,7 +8,9 @@ function Cart (props) {
   const [total, setTotal] = useState(0)
 
   function handleRemoveProduct () {
-
+    if (cart.length) {
+      setCart([])
+    }
   }
 
   function calculTotal () {
@@ -37,9 +38,14 @@ function Cart (props) {
     }
   }, [cart])
 
+  const empty = (
+      <p>Your cart is empty</p>
+  )
+
   return (
     <Fragment>
-        { cart &&
+        {
+        cart &&
                 <section className={classes.Cart}>
                     <div>
                         <p>Cart ({cart.length})</p>
@@ -56,10 +62,10 @@ function Cart (props) {
                     </div>
                     ))}
                     <div>
-                        <p>Total</p>
-                        <p className='price'>${total}</p>
+                        <p style={{ color: '#979797', textTransform: 'uppercase' }}>Total</p>
+                        <p className='price'>$ {total}</p>
                     </div>
-                    <Button type='standard'>Checkout</Button>
+                    <Button type='standard' fullWidth={true} >Checkout</Button>
                 </section>
             }
     </Fragment>

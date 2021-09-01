@@ -8,7 +8,6 @@ import TripleColumnItems from '../../../components/elements/TripleColumnItems'
 import { Fragment, useEffect, useState } from 'react'
 
 export const getStaticProps = async (context) => {
-  console.log(context)
   const productSlug = context.params.productDetails
   const product = productsData.filter(product => product.slug === productSlug)
   return {
@@ -56,7 +55,6 @@ function ProductDetails ({ product }) {
       }
     } else {
       updatedCart.push({ id: product.id, product: product, quantity: quantity })
-      console.log(updatedCart)
       setCart(updatedCart)
     }
 

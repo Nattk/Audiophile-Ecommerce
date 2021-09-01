@@ -7,7 +7,7 @@ function Button (props) {
 
   switch (type) {
     case 'standard':
-      btn = (<div className={`${classes.btn} ${classes.standardBtn}`} onClick={props.clicked} >
+      btn = (<div className={`${classes.btn} ${classes.standardBtn}`} onClick={props.clicked} style={{ width: props.fullWidth ? '100%' : '10rem' }}>
         {props.children}
     </div>)
       break
