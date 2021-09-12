@@ -1,18 +1,16 @@
-import { useState } from 'react'
 import classes from './QuantityButton.module.scss'
 
 function QuantityButton (props) {
-  const [quantity, setQuantity] = useState(0)
-
   function handlePlus () {
-    props.qtyHandler(props.qty + 1)
+    console.log(props.qty)
+    props.qtyHandler(props.qty + 1, props.id)
   }
 
   function handleMinus () {
     if (props.qty === 0) {
       props.qtyHandler(0)
     } else {
-      props.qtyHandler(props.qty - 1)
+      props.qtyHandler(props.qty - 1, props.id)
     }
   }
 

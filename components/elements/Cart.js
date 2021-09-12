@@ -1,4 +1,5 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useState, useContext } from 'react'
+import { CartContext } from '../../store/cart-context'
 import Button from '../UI/Button/Button'
 import QuantityButton from '../UI/Button/QuantityButton'
 import classes from './Cart.module.scss'
@@ -6,11 +7,19 @@ import classes from './Cart.module.scss'
 function Cart (props) {
   const [cart, setCart] = useState()
   const [total, setTotal] = useState(0)
-
-  function handleRemoveProduct () {
-    if (cart.length) {
-      setCart([])
+  const ctx = useContext(CartContext)
+  console.log(ctx)
+  function handleQuantity (newQuantity, id) {
+    const cartCopy = cart
+    console.log(cart)
+    for (let i = 0; i < cartCopy.length; i++) {
+      if (cartCopy[i].id === id) {
+        console.log('here')
+        cartCopy[i].quantity = newQuantity
+      }
     }
+    console.log(cartCopy)
+    setCart(cartCopy)
   }
 
   function calculTotal () {
@@ -58,7 +67,7 @@ function Cart (props) {
                             <p>{prod.product.name}</p>
                             <p className='price' style={{ color: '#979797' }}>${prod.product.price}</p>
                         </div>
-                        <QuantityButton qty={prod.quantity}/>
+                        <QuantityButton qty={prod.quantity} id={prod.id} qtyHandler={handleQuantity} />
                     </div>
                     ))}
                     <div>

@@ -1,6 +1,7 @@
 .Cart{
     display: flex;
     flex-direction: column;
+    min-width: 20rem;
 
     .cartImage{
            width: 5rem;
