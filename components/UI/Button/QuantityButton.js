@@ -1,23 +1,33 @@
 import classes from './QuantityButton.module.scss'
-
 function QuantityButton (props) {
+  let quantity = props.qty
+
   function handlePlus () {
-    console.log(props.qty)
-    props.qtyHandler(props.qty + 1, props.id)
+    if (!props.id) {
+      props.qtyHandler(props.qty + 1, props.id)
+    } else {
+      props.qtyHandler(props.id, '+')
+      quantity = quantity + 1
+    }
   }
 
   function handleMinus () {
     if (props.qty === 0) {
       props.qtyHandler(0)
     } else {
-      props.qtyHandler(props.qty - 1, props.id)
+      if (!props.id) {
+        props.qtyHandler(props.qty - 1, props.id)
+      } else {
+        props.qtyHandler(props.id, '-')
+        quantity = quantity - 1
+      }
     }
   }
 
   return (
       <div className={classes.QuantityButton}>
           <button onClick={handleMinus}>-</button>
-          <p>{props.qty}</p>
+          <p>{quantity}</p>
           <button onClick={handlePlus}>+</button>
       </div>
   )

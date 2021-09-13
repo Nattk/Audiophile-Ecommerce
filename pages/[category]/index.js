@@ -30,6 +30,7 @@ function Category ({ products }) {
   const router = useRouter()
 
   const handleChangePage = (product) => {
+    console.log('push')
     router.push({
       pathname: `${product.category}/${product.slug}`
     })

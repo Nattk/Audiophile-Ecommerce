@@ -1,13 +1,16 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 import Image from 'next/image'
 import Button from '../UI/Button/Button'
 import classes from './DoubleColumnProduct.module.scss'
+import { CartContext } from '../../store/cart-context'
 import { useRouter } from 'next/router'
 import QuantityButton from '../UI/Button/QuantityButton'
 
 function DoubleColumnProduct (props) {
   const inversion = props.inversion
   const product = props.product
+  console.log(product)
+  const CartCtx = useContext(CartContext)
   const router = useRouter()
 
   return (
@@ -24,8 +27,8 @@ function DoubleColumnProduct (props) {
             <Fragment>
               <p className="price">${product.price}</p>
               <div className={classes.addProduct}>
-                <QuantityButton qty={props.qty} qtyHandler={props.qtySet}/>
-                <Button type="standard" clicked={props.action}>add product</Button>
+                <QuantityButton qty={CartCtx.qty} qtyHandler={CartCtx.setQty}/>
+                <Button type="standard" clicked={() => CartCtx.handleAdd(product)}>add product</Button>
               </div>
             </Fragment>
             }
