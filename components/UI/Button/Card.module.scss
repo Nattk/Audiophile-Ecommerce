@@ -1,19 +1,7 @@
 .card{
-    position: fixed;
-    top:50%;
-    left:50%;
     display:flex;
     flex-direction: column;
     padding: 1rem;
     background-color: white;
     border-radius: var(--radius);
-
-    .closeButton{
-        border: none;
-        background: none;
-        cursor: pointer;
-        font-size: 1rem;
-        width: 3rem;
-        align-self: flex-end;
-    }
 }

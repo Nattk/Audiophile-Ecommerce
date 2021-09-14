@@ -1,14 +1,15 @@
 import Link from 'next/link'
 import classes from './Header.module.scss'
 import layout from '../Layout.module.scss'
-import Image from 'next/image'
-import cart from '../../../public/assets/shared/desktop/icon-cart.svg'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import SubHeader from './SubHeader'
+import Card from '../../UI/Button/Card'
+import Cart from '../../elements/Cart'
 import { useRouter } from 'next/router'
 
 function Header (props) {
   const router = useRouter()
+  const [cartDisplay, setCartDisplay] = useState(false)
 
   return (
      <Fragment>
@@ -30,9 +31,14 @@ function Header (props) {
                         <Link href="/earphones">Earphones</Link>
                     </li>
                 </ul>
-                <div className={classes.Cart} onClick={props.cartClicked}>
-                    <Image src={cart} alt="cart"/>
-                 </div>
+                <div className={classes.Cart}>
+                    <img src='/assets/shared/desktop/icon-cart.svg' alt="cart" onClick={() => setCartDisplay(!cartDisplay)}/>
+                    <div style={{ display: cartDisplay ? 'block' : 'none' }}>
+                        <Card>
+                            <Cart/>
+                        </Card>
+                    </div>
+                </div>
 
             </nav>
             <SubHeader/>

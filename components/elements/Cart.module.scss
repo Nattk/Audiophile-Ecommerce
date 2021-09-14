@@ -3,6 +3,11 @@
     flex-direction: column;
     min-width: 20rem;
 
+    p{
+        color: black;
+        font-size: 1rem;
+    }
+
     .cartImage{
            width: 5rem;
            height: 5rem;
@@ -11,8 +16,10 @@
 
     .productInfo{
         width: 15rem;
+        color:black;
         
         p{
+            font-size: 1rem;
             padding: 0.5rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -29,5 +36,9 @@
         justify-content: space-between;
         align-items: center;
         margin: 1rem 0rem 1rem 0rem;
+
+        & > p:last-child{
+            text-align: right;
+        }
     }
 }

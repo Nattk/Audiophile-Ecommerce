@@ -8,7 +8,7 @@ function TripleColumnItems () {
 
   const handleChangePage = (category) => {
     router.push({
-      pathname: '/' + category
+      pathname: '/' + category.name
     })
   }
 

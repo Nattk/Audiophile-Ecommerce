@@ -6,6 +6,7 @@ import YouMayAlsoLike from '../../../components/elements/YouMayAlsoLike'
 import DoubleColunmItems from '../../../components/elements/DoubleColumnItems'
 import TripleColumnItems from '../../../components/elements/TripleColumnItems'
 import { Fragment } from 'react'
+import { useRouter } from 'next/router'
 
 export const getStaticProps = async (context) => {
   const productSlug = context.params.productDetails
@@ -28,9 +29,14 @@ export const getStaticPaths = async () => {
 }
 
 function ProductDetails ({ product }) {
+  const router = useRouter()
+
   return (
         <Fragment>
-            <button>Go Back</button>
+            <button
+              style={{ color: '#979797', background: 'none', border: 'none', cursor: 'pointer', width: '5rem', margin: '2rem 0 2rem 0' }}
+              onClick={() => router.back()}
+              >Go Back</button>
             <DoubleColumnProduct product={product} inversion={false}/>
             <DoubleColumnProductDetails product={product}/>
             <DoubleColumnGallery product={product}/>
