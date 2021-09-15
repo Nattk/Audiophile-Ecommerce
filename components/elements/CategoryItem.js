@@ -11,16 +11,16 @@ function CategoryItem (props) {
   let item
   switch (category) {
     case 'headphones':
-      item = (<Image src={Headphones} alt="Headphones" width={230} height={230}/>)
+      item = (<img src={'/assets/shared/desktop/image-headphones.png'} alt="Headphones" className={classes.img}/>)
       break
     case 'speakers':
-      item = (<Image src={Speakers} alt="Speakers" width={230} height={230}/>)
+      item = (<img src={'/assets/shared/desktop/image-speakers.png'} alt="Speakers" className={classes.img}/>)
       break
     case 'earphones':
-      item = (<Image src={Earphones} alt="Earphones" width={230} height={230}/>)
+      item = (<img src={'/assets/shared/desktop/image-earphones.png'} alt="Earphones" className={classes.img}/>)
       break
     default:
-      item = (<Image src={Earphones} alt="Earphones" width={230} height={230}/>)
+      item = (<img src={'/assets/shared/desktop/image-earphones.png'} alt="Earphones" className={classes.img}/>)
       break
   }
   return (

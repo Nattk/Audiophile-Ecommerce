@@ -27,9 +27,9 @@
     grid-area: main;
     display: grid;
     row-gap: 5rem;
-    min-width: 100%;
     min-height: 40rem;
 }
+
 .footer {
     grid-area: footer;
     background-color: black;
@@ -62,3 +62,7 @@
     "left footer right";      
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+
+}

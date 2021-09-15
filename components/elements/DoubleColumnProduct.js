@@ -15,9 +15,7 @@ function DoubleColumnProduct (props) {
 
   return (
         <section className={`${classes.DoubleColumn} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }}>
-          <div className={classes.imgContainer}>
-            <Image src={product.image.desktop} alt={product.name} layout="fill" />
-          </div>
+          <img src={product.image.desktop} alt={product.name} />
           <div className={classes.productArea}>
             {product.new && <p className={classes.new}>New product</p>}
             <h2>{product.name}</h2>

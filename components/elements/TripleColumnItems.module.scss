@@ -5,3 +5,15 @@
     column-gap: 1rem ;
     min-height: 25rem;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+    .tripleColumns{
+        display: grid;
+        grid-template-rows: repeat(3, 20rem);
+        grid-template-columns: none;
+        justify-content: center;
+        row-gap: 1rem ;
+    }    
+
+}
