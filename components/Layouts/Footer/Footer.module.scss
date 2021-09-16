@@ -69,3 +69,69 @@
         }
     }
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .footer{
+        color:white;
+        background-color: black;
+        width: 100%;
+        height: auto;
+    
+        .brandDesc{
+            margin-top: 2rem;
+            width:75%;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .socials{
+            margin-top: 1rem;
+            display:flex;
+            flex-direction:column;
+            justify-content: flex-end;
+            align-items: baseline;
+    
+            svg{
+                margin:1rem 0 1rem 0;
+            }
+        }
+        
+        p:last-child{
+            margin-bottom:0;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #979797;
+        }
+    }
+    
+    .orangeLine{
+        width:6rem;
+        height:0.2rem;
+        background-color: var(--dark-orange);
+    }
+    
+    .title{
+        width: auto;
+        text-align: center;
+        font-weight: 800;
+        font-size: 2.8rem;
+    }
+    
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    
+        ul{
+            li{ 
+                margin: 2rem 0 2rem 0;
+                text-align: center;
+                font-weight: 600;
+                font-size: 2rem;
+                display: block;
+
+            }
+        }
+    }
+
+}

@@ -25,7 +25,12 @@ function YouMayAlsoLike (props) {
         {product.others.map((suggestion, i) => (
             <div key={i} className={classes.col}>
                 <div className={classes.imgContainer}>
-                  <Image src={suggestion.image.desktop} alt={suggestion.name} layout="fill"/>
+                <picture>
+                <source media="(min-width: 800px)" srcSet={suggestion.image.tablet}/>
+                  <source media="(max-width: 480px)" srcSet={suggestion.image.mobile}/>
+                  <img src={suggestion.image.desktop} alt={suggestion.name}/>
+                </picture>
+                  {/* <Image src={suggestion.image.desktop} alt={suggestion.name} layout="fill"/> */}
                 </div>
                 <p>{suggestion.name}</p>
                 <Button type='standard' clicked={() => handleChangePage(suggestion)} path={`/${categoryFinder(suggestion.slug)}/${suggestion.slug}`}>See Product</Button>
