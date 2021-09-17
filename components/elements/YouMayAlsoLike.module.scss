@@ -12,6 +12,10 @@
     font-weight: 600;
     text-transform: uppercase;
 
+    .imgContainer{
+        width:24rem;
+    }
+
     h3{
         grid-area:title;
         font-size: 1.8rem;
@@ -27,12 +31,6 @@
             margin-top: 2rem;
         }
 
-        .imgContainer{
-            width: 24rem;
-            height: 21rem;
-            position: relative;
-            object-fit: contain;
-          }
     }
 
     .col:nth-child(2){
@@ -62,6 +60,12 @@
                              "firstCol" 
                              "secondCol"
                              "lastCol" ;
+
+
+        .imgContainer{
+            width:auto;
+            height:auto;
+        }
     
         h3{
             grid-area:title;
@@ -79,13 +83,6 @@
                 font-size: 2rem;
 
             }
-    
-            .imgContainer{
-                width: 100%;
-                height: auto;
-                position: relative;
-                object-fit: none;
-              }
         }
     
         .col:nth-child(2){

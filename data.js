@@ -9,6 +9,11 @@ export const productsData =
       tablet: '/assets/product-yx1-earphones/tablet/image-product.jpg',
       desktop: '/assets/product-yx1-earphones/desktop/image-product.jpg'
     },
+    imageCategory: {
+      mobile: '/assets/category-earphones/mobile/image-yx1-earphones.jpg',
+      tablet: '/assets/category-earphones/tablet/image-yx1-earphones.jpg',
+      desktop: '/assets/category-earphones/desktop/image-yx1-earphones.jpg'
+    },
     category: 'earphones',
     new: true,
     price: 599,
@@ -92,6 +97,11 @@ export const productsData =
       tablet: '/assets/product-xx59-headphones/tablet/image-product.jpg',
       desktop: '/assets/product-xx59-headphones/desktop/image-product.jpg'
     },
+    imageCategory: {
+      mobile: '/assets/category-headphones/mobile/image-xx59.jpg',
+      tablet: '/assets/category-headphones/tablet/image-xx59.jpg',
+      desktop: '/assets/category-headphones/desktop/image-xx59.jpg'
+    },
     category: 'headphones',
     new: false,
     price: 899,
@@ -171,6 +181,11 @@ export const productsData =
       tablet: '/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg',
       desktop: '/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg'
     },
+    imageCategory: {
+      mobile: '/assets/category-headphones/mobile/image-xx99-mark-one.jpg',
+      tablet: '/assets/category-headphones/tablet/image-xx99-mark-one.jpg',
+      desktop: '/assets/category-headphones/desktop/image-xx99-mark-one.jpg'
+    },
     category: 'headphones',
     new: false,
     price: 1750,
@@ -249,6 +264,11 @@ export const productsData =
       mobile: '/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg',
       tablet: '/assets/product-xx99-mark-two-headphones/tablet/image-product.jpg',
       desktop: '/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg'
+    },
+    imageCategory: {
+      mobile: '/assets/category-headphones/mobile/image-xx99-mark-two.jpg',
+      tablet: '/assets/category-headphones/tablet/image-xx99-mark-two.jpg',
+      desktop: '/assets/category-headphones/desktop/image-xx99-mark-two.jpg'
     },
     category: 'headphones',
     new: true,
@@ -333,6 +353,11 @@ export const productsData =
       tablet: '/assets/product-zx7-speaker/tablet/image-product.jpg',
       desktop: '/assets/product-zx7-speaker/desktop/image-product.jpg'
     },
+    imageCategory: {
+      mobile: '/assets/category-speakers/mobile/image-zx7.jpg',
+      tablet: '/assets/category-speakers/tablet/image-zx7.jpg',
+      desktop: '/assets/category-speakers/desktop/image-zx7.jpg'
+    },
     category: 'speakers',
     new: false,
     price: 3500,
@@ -415,6 +440,11 @@ export const productsData =
       mobile: '/assets/product-zx9-speaker/mobile/image-product.jpg',
       tablet: '/assets/product-zx9-speaker/tablet/image-product.jpg',
       desktop: '/assets/product-zx9-speaker/desktop/image-product.jpg'
+    },
+    imageCategory: {
+      mobile: '/assets/category-speakers/mobile/image-zx9.jpg',
+      tablet: '/assets/category-speakers/tablet/image-zx9.jpg',
+      desktop: '/assets/category-speakers/desktop/image-zx9.jpg'
     },
     category: 'speakers',
     new: true,

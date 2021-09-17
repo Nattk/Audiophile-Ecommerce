@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from 'react'
-import Image from 'next/image'
 import Button from '../UI/Button/Button'
 import classes from './DoubleColumnProduct.module.scss'
 import { CartContext } from '../../store/cart-context'
@@ -14,8 +13,22 @@ function DoubleColumnProduct (props) {
   const router = useRouter()
 
   return (
-        <section className={`${classes.DoubleColumn} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }}>
-          <img src={product.image.desktop} alt={product.name} />
+        <section className={`${classes.DoubleColumn} ${router.pathname !== '/[category]/[productDetails]' ? classes.category : ''} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }}>
+          {router.pathname !== '/[category]/[productDetails]' &&
+              <picture className={classes.categoryImage}>
+              <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet={product.imageCategory.tablet} alt={product.name}/>
+              <source media="screen and (min-device-width : 320px) and (max-device-width : 480px)" srcSet={product.imageCategory.mobile} alt={product.name}/>
+              <img src={product.imageCategory.desktop} alt={product.name}/>
+              </picture>
+          }
+            {router.pathname === '/[category]/[productDetails]' &&
+              <picture className={classes.productImage}>
+                <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet={product.image.tablet} alt={product.name}/>
+                <source media="screen and (min-device-width : 320px) and (max-device-width : 480px)" srcSet={product.image.mobile} alt={product.name}/>
+                <img src={product.image.desktop} alt={product.name}/>
+              </picture>
+            }
+
           <div className={classes.productArea}>
             {product.new && <p className={classes.new}>New product</p>}
             <h2>{product.name}</h2>
