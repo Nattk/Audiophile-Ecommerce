@@ -6,16 +6,32 @@ import SubHeader from './SubHeader'
 import Card from '../../UI/Button/Card'
 import Cart from '../../elements/Cart'
 import { useRouter } from 'next/router'
+import TripleColumnItems from '../../elements/TripleColumnItems'
 
 function Header (props) {
   const router = useRouter()
   const [cartDisplay, setCartDisplay] = useState(false)
+  const [menuDisplay, setMenuDisplay] = useState(false)
+
+  const menu = () => {
+    setMenuDisplay(!menuDisplay)
+    setCartDisplay(false)
+  }
 
   return (
      <Fragment>
       <div className={layout.leftHeader} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}></div>
         <header className={`${layout.header}`} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}>
             <nav className={`${classes.nav}`}>
+            <div className={classes.Menu}>
+             <img src='/assets/shared/tablet/icon-hamburger.svg' onClick={() => menu()}/>
+                <div style={{ display: menuDisplay ? 'block' : 'none' }}>
+                    <Card>
+                        <TripleColumnItems/>
+                    </Card>
+                </div>
+            </div>
+
                 <p>audiophile</p>
                 <ul>
                     <li>
@@ -39,7 +55,6 @@ function Header (props) {
                         </Card>
                     </div>
                 </div>
-
             </nav>
             <SubHeader/>
         </header>
