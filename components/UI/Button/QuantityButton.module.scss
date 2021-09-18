@@ -16,3 +16,39 @@
         color: #979797;
     }
 }
+
+
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
+
+
+    .QuantityButton{
+        height: 5rem;
+        width: 10rem;
+
+        p{
+           font-size: 2rem; 
+        }
+        
+        button{
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
+    .QuantityButton{
+        height: 5rem;
+        width: 10rem;
+
+        p{
+            font-size: 2rem; 
+         }
+
+        button{
+            font-size: 2rem;
+        }
+    }
+}

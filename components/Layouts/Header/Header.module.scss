@@ -149,6 +149,17 @@
         .Menu{
             display: block;
         }
+
+        img {
+            border-radius: 0px;
+            width: 3rem;
+        }  
+        
+        &>p{
+            width: auto;
+            font-size: 3.5rem;
+        }
+        
     }
 
     .categoryName {
@@ -199,7 +210,16 @@
 
         ul{
             display: none;
-        }    
+        } 
+        img {
+            border-radius: 0px;
+            width: 3rem;
+        }  
+        
+        p{
+            width: auto;
+            font-size: 3.5rem;
+        }
         
         .Menu{
             display: block;
