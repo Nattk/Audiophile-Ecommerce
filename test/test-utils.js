@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 // test-utils.js
 import { render } from '@testing-library/react'
 

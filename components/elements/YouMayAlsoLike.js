@@ -1,5 +1,4 @@
 import classes from './YouMayAlsoLike.module.scss'
-import Image from 'next/image'
 import Button from '../UI/Button/Button'
 import { useRouter } from 'next/router'
 import { productsData } from '../../data'

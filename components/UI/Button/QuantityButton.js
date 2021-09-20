@@ -25,9 +25,9 @@ function QuantityButton (props) {
   }
 
   return (
-      <div className={classes.QuantityButton}>
+      <div className={classes.QuantityButton} data-testid='quantityButton'>
           <button onClick={handleMinus}>-</button>
-          <p>{quantity}</p>
+            <p>{quantity}</p>
           <button onClick={handlePlus}>+</button>
       </div>
   )
