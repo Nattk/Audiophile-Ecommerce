@@ -2,7 +2,7 @@ import classes from './DoubleColumnItems.module.scss'
 
 function DoubleColumnItem () {
   return (
-        <section className={classes.doubleColumn}>
+        <section className={classes.doubleColumn} data-testid="DoubleColumnItems">
             <div className={classes.textColumn}>
                 <h2> Bringing you the <span>best</span> audio gear</h2>
                 <p>

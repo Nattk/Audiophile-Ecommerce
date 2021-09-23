@@ -19,7 +19,7 @@ function YouMayAlsoLike (props) {
   }
 
   return (
-        <section className={classes.tripleColumn}>
+        <section className={classes.tripleColumn} data-testid="YouMayAlsoLike">
         <h3>You May Also Like</h3>
         {product.others.map((suggestion, i) => (
             <div key={i} className={classes.col}>

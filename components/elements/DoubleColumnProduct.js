@@ -13,7 +13,7 @@ function DoubleColumnProduct (props) {
   const router = useRouter()
 
   return (
-        <section className={`${classes.DoubleColumn} ${router.pathname !== '/[category]/[productDetails]' ? classes.category : ''} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }}>
+        <section className={`${classes.DoubleColumn} ${router.pathname !== '/[category]/[productDetails]' ? classes.category : ''} ${inversion ? classes.reversed : ''}`} style={{ justifyItems: inversion ? 'start' : 'center' }} data-testid="DoubleColumnProduct">
           {router.pathname !== '/[category]/[productDetails]' &&
               <picture className={classes.categoryImage}>
               <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet={product.imageCategory.tablet} alt={product.name}/>

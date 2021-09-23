@@ -27,7 +27,7 @@ function CategoryItem (props) {
       break
   }
   return (
-        <div className={classes.CategoryItem}>
+        <div className={classes.CategoryItem} data-testid="CategoryItem">
             <div className={classes.imgContainer}>
               {item}
               <p>{category}</p>

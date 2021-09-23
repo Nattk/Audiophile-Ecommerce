@@ -4,7 +4,7 @@ function DoubleColumnProductDetails (props) {
   const product = props.product
   console.log()
   return (
-        <section className={classes.productDetails}>
+        <section className={classes.productDetails} data-testid="DoubleColumnProductDetails">
             <div>
                 <h3>features</h3>
                 <br/>

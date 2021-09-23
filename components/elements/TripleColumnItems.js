@@ -13,7 +13,7 @@ function TripleColumnItems () {
   }
 
   return (
-        <section className={classes.tripleColumns}>
+        <section className={classes.tripleColumns} data-testid="TripleColumnItems">
           {categoryName.map(category => (
             <CategoryItem key={category.id} category={category.name} action={() => handleChangePage(category)}/>
           ))}

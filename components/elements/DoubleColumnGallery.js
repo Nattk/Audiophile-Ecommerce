@@ -3,7 +3,7 @@ import classes from './DoubleColumnGallery.module.scss'
 function DoubleColumnGallery (props) {
   const product = props.product
   return (
-        <section className={classes.Gallery}>
+        <section className={classes.Gallery} data-testid="doubleColumnGallery">
             <div className={classes.firstCol}>
                 <picture>
                     <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet={product.gallery.first.tablet} alt={product.name}/>

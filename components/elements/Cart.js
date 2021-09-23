@@ -14,7 +14,7 @@ function Cart (props) {
     <Fragment>
         {
         cartCtx &&
-                <section className={classes.Cart}>
+                <section data-testid="Cart" className={classes.Cart}>
                     <div>
                         <p>Cart ({cartCtx.length})</p>
                         <p onClick={() => handleRemoveProduct()}>Remove All</p>
