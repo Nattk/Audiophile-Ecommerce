@@ -8,7 +8,6 @@ import QuantityButton from '../UI/Button/QuantityButton'
 function DoubleColumnProduct (props) {
   const inversion = props.inversion
   const product = props.product
-  console.log(product)
   const CartCtx = useContext(CartContext)
   const router = useRouter()
 
@@ -18,18 +17,18 @@ function DoubleColumnProduct (props) {
               <picture className={classes.categoryImage}>
               <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet={product.imageCategory.tablet} alt={product.name}/>
               <source media="screen and (min-device-width : 320px) and (max-device-width : 480px)" srcSet={product.imageCategory.mobile} alt={product.name}/>
-              <img src={product.imageCategory.desktop} alt={product.name}/>
+              <img src={product.imageCategory.desktop} alt={product.name} data-testid='categoryImg'/>
               </picture>
           }
             {router.pathname === '/[category]/[productDetails]' &&
               <picture className={classes.productImage}>
                 <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet={product.image.tablet} alt={product.name}/>
                 <source media="screen and (min-device-width : 320px) and (max-device-width : 480px)" srcSet={product.image.mobile} alt={product.name}/>
-                <img src={product.image.desktop} alt={product.name}/>
+                <img src={product.image.desktop} alt={product.name} data-testid='productDetailsImg'/>
               </picture>
             }
 
-          <div className={classes.productArea}>
+          <div className={classes.productArea} data-testid='productArea'>
             {product.new && <p className={classes.new}>New product</p>}
             <h2>{product.name}</h2>
             <p className={classes.description}>{product.description}</p>

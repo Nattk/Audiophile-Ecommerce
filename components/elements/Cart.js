@@ -8,7 +8,6 @@ function Cart (props) {
   const cartCtx = useContext(CartContext).cartProducts
   const qtyHandler = useContext(CartContext).handleQty
   const total = useContext(CartContext).total
-  console.log(cartCtx)
 
   return (
     <Fragment>

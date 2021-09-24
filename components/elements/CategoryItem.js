@@ -7,16 +7,12 @@ function CategoryItem (props) {
   switch (category) {
     case 'headphones':
       item = (
-      <picture>
         <img src={'/assets/shared/desktop/image-headphones.png'} alt="Headphones" className={classes.img}/>
-      </picture>
       )
       break
     case 'speakers':
       item = (
-      <picture>
        <img src={'/assets/shared/desktop/image-speakers.png'} alt="Speakers" className={classes.img}/>
-      </picture>
       )
       break
     case 'earphones':
@@ -30,7 +26,7 @@ function CategoryItem (props) {
         <div className={classes.CategoryItem} data-testid="CategoryItem">
             <div className={classes.imgContainer}>
               {item}
-              <p>{category}</p>
+              <p data-testid='category'>{category}</p>
               <Button type="arrow" clicked={props.action}>Shop</Button>
             </div>
             <div className={classes.categoryName}></div>
