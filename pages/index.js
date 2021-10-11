@@ -9,6 +9,7 @@ export default function Home () {
     <Fragment>
       <Head>
         <title>Audiophile E-commerce</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="description" content="Audiophile" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
