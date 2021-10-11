@@ -24,8 +24,8 @@ function YouMayAlsoLike (props) {
         {product.others.map((suggestion, i) => (
             <div key={i} className={classes.col}>
                 <picture>
-                  <source media="screen and (min-device-width : 480px) and (max-device-width : 768px)" srcSet={suggestion.image.tablet}/>
-                  <source media="screen and (min-device-width : 320px) and (max-device-width : 480px)" srcSet={suggestion.image.mobile}/>
+                  <source media="screen and (min-width : 480px) and (max-width : 768px)" srcSet={suggestion.image.tablet}/>
+                  <source media="screen and (min-width : 320px) and (max-width : 480px)" srcSet={suggestion.image.mobile}/>
                   <img src={suggestion.image.desktop} alt={suggestion.name} className={classes.imgContainer}/>
                 </picture>
                   {/* <Image src={suggestion.image.desktop} alt={suggestion.name} layout="fill"/> */}

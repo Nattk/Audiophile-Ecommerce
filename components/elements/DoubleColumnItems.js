@@ -13,8 +13,8 @@ function DoubleColumnItem () {
             </div>
             <div className={classes.imageColumn}>
             <picture>
-                <source media="screen and (min-device-width:480px) and (max-device-width: 768px)" srcSet='/assets/shared/tablet/image-best-gear.jpg' alt='best gear'/>
-                <source media="screen and (min-device-width:480px) and (max-device-width: 768px) " srcSet='/assets/shared/mobile/image-best-gear.jpg' alt='best gear'/>
+                <source media="screen and (min-width:480px) and (max-width: 768px)" srcSet='/assets/shared/tablet/image-best-gear.jpg' alt='best gear'/>
+                <source media="screen and (min-width:480px) and (max-width: 768px) " srcSet='/assets/shared/mobile/image-best-gear.jpg' alt='best gear'/>
                 <img src='/assets/shared/desktop/image-best-gear.jpg' alt='best gear'/>
             </picture>
             </div>

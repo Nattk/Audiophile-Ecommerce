@@ -6,9 +6,6 @@ import { Fragment } from 'react'
 function Footer () {
   return (
     <Fragment>
-      <div className={layout.left}>
-          left
-        </div>
         <footer className={`${layout.footer} ${classes.footer}`}>
             <span className={classes.orangeLine}></span>
             <div className={classes.nav}>
@@ -42,9 +39,6 @@ function Footer () {
             </div>
             <p>Copyright 2021. All Rights Reserved</p>
         </footer>
-        <div className={layout.right}>
-            right
-        </div>
     </Fragment>
   )
 }

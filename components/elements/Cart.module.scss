@@ -45,7 +45,7 @@
 
 
 
-@media only screen and (min-device-width:480px) and (max-device-width: 768px) {
+@media only screen and (min-width:480px) and (max-width: 768px) {
 
     .Cart{
         .cartImage{
@@ -73,7 +73,7 @@
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
 
     .Cart{
         .cartImage{

@@ -20,7 +20,6 @@ function Header (props) {
 
   return (
      <Fragment>
-      <div className={layout.leftHeader} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}></div>
         <header className={`${layout.header}`} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}>
             <nav className={`${classes.nav}`}>
             <div className={classes.Menu}>
@@ -58,7 +57,6 @@ function Header (props) {
             </nav>
             <SubHeader/>
         </header>
-        <div className={layout.rightHeader} style = {{ backgroundColor: router.pathname !== '/' ? 'black' : 'transparent' }}></div>
     </Fragment>
 
   )
